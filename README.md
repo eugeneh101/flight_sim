@@ -7,7 +7,6 @@ This project uses the CrewAI framework to simulate early multi-agent collaborati
 - [Overview](#overview)
 - [Setup](#setup)
 - [Running the Simulation](#running-the-simulation)
-- [Configuration](#configuration)
 - [Project Structure](#project-structure)
 - [Requirements](#requirements)
 
@@ -22,17 +21,17 @@ The simulation involves multiple agents performing their roles to execute a succ
    cd flight_sim
    ```
 
-2. **Update Environment Variables**
-   - Ensure you have a `.env` file in the root directory with your API key:
-   ```
-   OPENAI_API_KEY=your_api_key_here
-   ```
-
-3. **Create a Virtual Environment and Install Requirements**
+2. **Create a Virtual Environment and Install Requirements**
    ```bash
    python -m venv .venv
    source venv/bin/activate
    python install -r requirements.txt
+   ```
+
+3. **Update Environment Variables**
+   - Ensure you have a `.env` file in the root directory with your API key:
+   ```
+   OPENAI_API_KEY=your_api_key_here
    ```
 
 ## Running the Simulation
