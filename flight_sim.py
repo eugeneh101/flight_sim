@@ -1,6 +1,5 @@
 import functools
 import operator
-import os
 from typing import Annotated, Literal, Sequence, TypedDict
 
 from dotenv import load_dotenv

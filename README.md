@@ -33,6 +33,11 @@ The simulation involves multiple agents performing their roles to execute a succ
    ```
    OPENAI_API_KEY=your_api_key_here
    ```
+   Optionally you can put the following for traces to be stored in LangSmith:
+   ```
+   export LANGCHAIN_API_KEY=your_api_key_here
+   export LANGCHAIN_TRACING_V2=true
+   ```
 
 ## Running the Simulation
 To run the simulation, execute the main script from the terminal:
