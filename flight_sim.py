@@ -93,7 +93,7 @@ copilot = create_agent(
 )
 copilot_node = functools.partial(agent_node, agent=copilot, name="Co-Pilot")
 
-# copilot
+# search_operator
 search_operator = create_agent(
     llm,
     [flight_tools.radio, flight_tools.operate_systems],
