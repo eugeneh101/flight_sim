@@ -169,6 +169,6 @@ for i, s in enumerate(events, 1):
     key = list(s.keys())[0]
     if key == "call_tool":
         print(
-            f"Step{i}: {s[key]['messages'][0].name} --> {s[key]['messages'][0].content}"
+            f"Step{int(i/2)}: {s[key]['messages'][0].name} --> {s[key]['messages'][0].content}"
         )
         print("----")

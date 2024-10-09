@@ -32,7 +32,7 @@ uppercase letters.
 You have access to the following tools: {tool_names}.\n{system_message}
 """
 
-mission_comander_role = """
+mission_commander_role = """
 ##Role: Mission Commander
 **Location**: Ground Control Station
 **Responsibilities**:

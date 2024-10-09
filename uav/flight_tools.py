@@ -1,18 +1,24 @@
 from langchain_core.tools import tool
+import random
+
+def generate_random_telemetry():
+    telemetry_data = {
+        "GPS": {
+            "latitude": round(random.uniform(-90.0, 90.0), 6),
+            "longitude": round(random.uniform(-180.0, 180.0), 6)
+        },
+        "altitude": random.randint(0, 10000),  # altitude in meters
+        "battery": random.randint(0, 100),  # battery percentage
+        "flight_mode": random.choice(["AUTO", "MANUAL", "RTL", "LOITER", "LAND"]),
+        "speed": round(random.uniform(0, 100), 2),  # speed in m/s
+        "heading": random.randint(0, 360)  # heading in degrees
+    }
+    return telemetry_data
 
 # Helper functions to simulate data retrieval
 def get_telemetry_data(data_type):
     # Simulated telemetry data
-    telemetry_data = {
-    "GPS": {"latitude": 37.7749, "longitude": -122.4194},
-    "altitude": 1200, # in meters
-    "battery": 85, # in percentage
-    "flight_mode": "AUTO",
-    "speed": 45,
-    # in m/s
-    "heading": 90
-    # in degrees
-    }
+    telemetry_data = generate_random_telemetry()
     return telemetry_data.get(data_type, "Data type not available")
 
 def get_autopilot_status():
