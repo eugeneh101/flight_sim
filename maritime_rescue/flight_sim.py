@@ -93,7 +93,7 @@ copilot = create_agent(
 )
 copilot_node = functools.partial(agent_node, agent=copilot, name="Co-Pilot")
 
-# copilot
+# search_operator
 search_operator = create_agent(
     llm,
     [flight_tools.radio, flight_tools.operate_systems],
@@ -169,6 +169,6 @@ for i, s in enumerate(events, 1):
     key = list(s.keys())[0]
     if key == "call_tool":
         print(
-            f"Step{i}: {s[key]['messages'][0].name} --> {s[key]['messages'][0].content}"
+            f"Step{int(i/2)}: {s[key]['messages'][0].name} --> {s[key]['messages'][0].content}"
         )
         print("----")
